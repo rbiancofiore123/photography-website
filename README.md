@@ -1,49 +1,23 @@
-# Photography Portfolio Single Page App
+# Captured Moments Photography Portfolio
 
-A Python-powered single page application that showcases a photographer's story, body of work,
-and contact information. The design is built with modern gradients, responsive layouts, and
-smooth in-page navigation so visitors can explore the four core sections: Home, About,
-Portfolio, and Contact.
-
-## Project Structure
-
-```
-photography-website/
-├── requirements.txt   # Python dependencies for the web server
-└── src/
-    └── app.py         # Flask app returning the single-page HTML experience
-```
+A single-page photography portfolio website built with semantic HTML, modern CSS, and a touch of
+JavaScript for smooth navigation. The layout features anchored sections for Home, About, Portfolio,
+and Contact, making it easy to showcase work, tell a story, and invite visitors to inquire.
 
 ## Getting Started
 
-1. **Create a virtual environment (optional but recommended)**
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
-   ```
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the development server**
-   ```bash
-   python src/app.py
-   ```
-4. **View the site**
-   Open your browser to [http://localhost:5000](http://localhost:5000) to explore the single-page
-   portfolio.
+1. Clone or download this repository.
+2. Open `index.html` in your favorite browser.
+3. Customize the copy, images, and colors to reflect your brand.
 
 ## Customization Tips
 
-- Replace the Unsplash image URLs in `PAGE_HTML` with links to your own work.
-- Adjust the color palette by editing the CSS custom properties located at the top of the
-  `<style>` block.
-- Update the hero headline, about copy, and portfolio descriptions so they reflect your voice
-  and services.
-- Hook the contact form up to a backend or service such as Formspree if you want to capture
-  submissions.
+- Replace the Unsplash image URLs with links to your own photography.
+- Adjust the color palette by editing the CSS custom properties at the top of the `<style>` block.
+- Update the hero headline, about copy, and portfolio descriptions to match your services.
+- Hook the contact form up to your preferred form service if you want to collect submissions.
 
 ## License
 
-This project is provided as-is for personal or commercial portfolio use. Modify it freely to
-match your needs.
+This project is provided as-is for personal or commercial portfolio use. Modify it freely to match
+your needs.

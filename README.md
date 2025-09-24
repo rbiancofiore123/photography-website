@@ -1,26 +1,49 @@
-# Photography Portfolio Website
+# Photography Portfolio Single Page App
 
-A modern single-page website designed to showcase the work of a photographer. The site highlights the photographer's story, curated portfolio pieces, and easy ways for potential clients to get in touch.
+A Python-powered single page application that showcases a photographer's story, body of work,
+and contact information. The design is built with modern gradients, responsive layouts, and
+smooth in-page navigation so visitors can explore the four core sections: Home, About,
+Portfolio, and Contact.
 
-## Features
+## Project Structure
 
-- **Hero introduction**: Presents the photographer's name and a compelling call to explore their work.
-- **About Me section**: Shares the photographer's background, philosophy, and approach to their craft.
-- **Portfolio gallery**: Displays featured photo collections with visual emphasis on style and range.
-- **Contact section**: Provides a simple form and contact details so visitors can request sessions or ask questions.
+```
+photography-website/
+├── requirements.txt   # Python dependencies for the web server
+└── src/
+    └── app.py         # Flask app returning the single-page HTML experience
+```
 
 ## Getting Started
 
-1. Clone this repository.
-2. Open the project in your preferred code editor.
-3. Launch the site by opening `index.html` in a browser or serving the files with a local web server.
+1. **Create a virtual environment (optional but recommended)**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   ```
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the development server**
+   ```bash
+   python src/app.py
+   ```
+4. **View the site**
+   Open your browser to [http://localhost:5000](http://localhost:5000) to explore the single-page
+   portfolio.
 
-## Customization
+## Customization Tips
 
-- Replace placeholder images with your own photography.
-- Update the about section with personal information, achievements, and services offered.
-- Adjust styling in the CSS files to match your brand's colors and typography.
+- Replace the Unsplash image URLs in `PAGE_HTML` with links to your own work.
+- Adjust the color palette by editing the CSS custom properties located at the top of the
+  `<style>` block.
+- Update the hero headline, about copy, and portfolio descriptions so they reflect your voice
+  and services.
+- Hook the contact form up to a backend or service such as Formspree if you want to capture
+  submissions.
 
 ## License
 
-This project is provided as-is for personal or commercial portfolio use. Modify it freely to match your needs.
+This project is provided as-is for personal or commercial portfolio use. Modify it freely to
+match your needs.

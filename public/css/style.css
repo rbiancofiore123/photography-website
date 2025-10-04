@@ -11,6 +11,10 @@
     font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -19,6 +23,26 @@ body {
     margin: 0;
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92) 45%, rgba(15, 23, 42, 0.85));
     color: var(--text-light);
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 1rem;
+    background: var(--accent);
+    color: var(--text-dark);
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    transform: translateY(0);
+    z-index: 1001;
 }
 
 header {
@@ -56,6 +80,7 @@ nav a {
     font-weight: 500;
     position: relative;
     padding-bottom: 0.25rem;
+    outline: none;
 }
 
 nav a::after {
@@ -75,6 +100,11 @@ nav a:hover::after,
 nav a.active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+nav a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 main {
@@ -132,6 +162,11 @@ section {
 .btn-primary:hover {
     background: var(--accent-dark);
     transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(255, 122, 89, 0.6);
+    outline-offset: 3px;
 }
 
 .btn-secondary {
@@ -280,16 +315,35 @@ textarea {
     border: 1px solid rgba(148, 163, 184, 0.4);
     font: inherit;
     resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 textarea {
     min-height: 160px;
 }
 
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 122, 89, 0.25);
+}
+
 footer {
     text-align: center;
     padding: 3rem 1rem;
     color: rgba(248, 250, 252, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 @media (max-width: 640px) {

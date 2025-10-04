@@ -1,13 +1,13 @@
 :root {
-    color-scheme: light dark;
-    --accent: #ff7a59;
-    --accent-dark: #d95c3d;
-    --bg: #0f172a;
-    --bg-light: #f8fafc;
-    --text-dark: #0f172a;
-    --text-light: #f8fafc;
-    --muted: #64748b;
-    --shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+    color-scheme: light;
+    --accent: #8aa982;
+    --accent-dark: #6f8f6b;
+    --bg: #f3ede2;
+    --bg-light: #fff9f0;
+    --text-dark: #2f3a2f;
+    --text-light: #fdfdf9;
+    --muted: #637262;
+    --shadow: 0 18px 45px rgba(47, 58, 47, 0.12);
     font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
@@ -21,8 +21,8 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92) 45%, rgba(15, 23, 42, 0.85));
-    color: var(--text-light);
+    background: linear-gradient(180deg, rgba(138, 169, 130, 0.18), rgba(243, 237, 226, 0.95) 45%, rgba(255, 249, 240, 0.98));
+    color: var(--text-dark);
     font-family: inherit;
     line-height: 1.6;
 }
@@ -54,10 +54,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem clamp(2rem, 6vw, 6rem);
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(255, 249, 240, 0.92);
     backdrop-filter: blur(12px);
     z-index: 1000;
-    box-shadow: 0 2px 24px rgba(15, 23, 42, 0.2);
+    box-shadow: 0 2px 24px rgba(47, 58, 47, 0.15);
 }
 
 .logo {
@@ -165,14 +165,15 @@ section {
 }
 
 .btn:focus-visible {
-    outline: 3px solid rgba(255, 122, 89, 0.6);
+    outline: 3px solid rgba(138, 169, 130, 0.45);
     outline-offset: 3px;
 }
 
 .btn-secondary {
-    border: 1px solid rgba(248, 250, 252, 0.2);
-    color: var(--text-light);
+    border: 1px solid rgba(47, 58, 47, 0.15);
+    color: var(--text-dark);
     backdrop-filter: blur(6px);
+    background: rgba(255, 249, 240, 0.8);
 }
 
 .hero-image {
@@ -210,7 +211,7 @@ section {
 }
 
 .stat {
-    background: white;
+    background: #fdfcf8;
     border-radius: 24px;
     padding: 2rem;
     box-shadow: var(--shadow);
@@ -224,7 +225,7 @@ section {
 
 .stat p {
     margin-top: 0.75rem;
-    color: #334155;
+    color: #475347;
 }
 
 .portfolio {
@@ -238,7 +239,7 @@ section {
 }
 
 .portfolio-card {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -247,7 +248,7 @@ section {
 
 .portfolio-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+    box-shadow: 0 24px 60px rgba(47, 58, 47, 0.18);
 }
 
 .portfolio-card img {
@@ -312,7 +313,7 @@ input,
 textarea {
     padding: 0.85rem 1rem;
     border-radius: 12px;
-    border: 1px solid rgba(148, 163, 184, 0.4);
+    border: 1px solid rgba(110, 129, 110, 0.35);
     font: inherit;
     resize: vertical;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -326,13 +327,13 @@ input:focus-visible,
 textarea:focus-visible {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(255, 122, 89, 0.25);
+    box-shadow: 0 0 0 3px rgba(138, 169, 130, 0.25);
 }
 
 footer {
     text-align: center;
     padding: 3rem 1rem;
-    color: rgba(248, 250, 252, 0.7);
+    color: rgba(47, 58, 47, 0.65);
 }
 
 @media (prefers-reduced-motion: reduce) {

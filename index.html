@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Captured Moments showcases fine art wedding, portrait, and lifestyle photography by Paula Bendowska." />
+    <meta name="keywords" content="photography, wedding photography, portrait photography, lifestyle photography, Paula Bendowska" />
+    <meta name="author" content="Paula Bendowska" />
     <meta name="theme-color" content="#f3ede2" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Captured Moments — Photography Portfolio" />
+    <meta property="og:description" content="Fine art wedding, portrait, and lifestyle photography by Paula Bendowska" />
+    <meta property="og:image" content="" />
+    
     <title>Captured Moments &mdash; Photography Portfolio</title>
     <link rel="stylesheet" href="public/css/style.css" />
     <script src="public/js/main.js" defer></script>
-
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -25,29 +33,31 @@
         </nav>
     </header>
     <main id="main-content">
-        <section id="home" class="hero">
+        <section id="home" class="hero" aria-labelledby="hero-heading">
             <div class="hero-copy">
-                <h1>Paula Bendowska &mdash; Portrait Photographer</h1>
-                <p>
-                    I’m Paula Bendowska, a destination photographer capturing heartfelt weddings, editorial portraits,
+                <h1 id="hero-heading">Paula Bendowska &mdash; Portrait Photographer</h1>
+                <p class="hero-description">
+                    I'm Paula Bendowska, a destination photographer capturing heartfelt weddings, editorial portraits,
                     and cinematic lifestyle imagery. I approach every story with empathy, artistry, and a love for
                     natural light.
                 </p>
-                <div class="cta-group">
-                    <a class="btn btn-primary" href="#portfolio">View Portfolio</a>
-                    <a class="btn btn-secondary" href="#contact">Book a Session</a>
+                <div class="cta-group" role="group" aria-label="Call to action buttons">
+                    <a class="btn btn-primary" href="#portfolio" aria-label="View photography portfolio">View Portfolio</a>
+                    <a class="btn btn-secondary" href="#contact" aria-label="Book a photography session">Book a Session</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
-                    alt="Newlywed couple embracing during golden hour" />
-            </div>
+            <figure class="hero-image">
+                <img src=""
+                    alt="Newlywed couple embracing during golden hour"
+                    width="1200"
+                    height="800" />
+            </figure>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about" aria-labelledby="about-heading">
             <div class="about-grid">
-                <article>
-                    <h2 class="section-title">About Me</h2>
+                <article class="about-content">
+                    <h2 id="about-heading" class="section-title">About Me</h2>
                     <p>
                         Hi, I&rsquo;m Paula, a Polish portrait photographer based between Italy and Poland.
                     </p>
@@ -61,60 +71,72 @@
                         and finding beauty in simplicity.
                     </p>
                 </article>
-                <article class="stat">
-                    <h3>200+</h3>
-                    <p>Weddings and editorial stories captured across 12 countries.</p>
-                </article>
-                <article class="stat">
-                    <h3>14</h3>
-                    <p>Years dedicated to photographing modern love and human connection.</p>
-                </article>
-                <article class="stat">
-                    <h3>5★</h3>
-                    <p>Average client rating for communication, artistry, and professionalism.</p>
-                </article>
+                <div class="stat" role="region" aria-label="Experience statistics">
+                    <p class="stat-number" aria-label="Over 200 projects">200+</p>
+                    <p class="stat-description">Weddings and editorial stories captured across 12 countries.</p>
+                </div>
+                <div class="stat" role="region" aria-label="Years of experience">
+                    <p class="stat-number" aria-label="14 years">14</p>
+                    <p class="stat-description">Years dedicated to photographing modern love and human connection.</p>
+                </div>
+                <div class="stat" role="region" aria-label="Client rating">
+                    <p class="stat-number" aria-label="5 star rating">5★</p>
+                    <p class="stat-description">Average client rating for communication, artistry, and professionalism.</p>
+                </div>
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio">
-            <div>
-                <h2>Portfolio</h2>
+        <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading">
+            <header class="section-header">
+                <h2 id="portfolio-heading">Portfolio</h2>
                 <p class="section-description">
                     A curated look at client stories&mdash;from luminous destination weddings to editorial portraiture and
                     lifestyle campaigns. Each gallery is shot on full-frame digital and 35mm film for layered texture.
                 </p>
-            </div>
-            <div class="portfolio-grid">
-                <article class="portfolio-card">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
-                        alt="Couple embracing during golden hour" loading="lazy" />
-                    <div>
-                        <h3>Golden Hour Vows</h3>
-                        <p>Destination elopement in the Dolomites, capturing soft, sun-kissed romance.</p>
+            </header>
+            <div class="portfolio-grid" role="list">
+                <article class="portfolio-card" role="listitem">
+                    <img src=""
+                        alt="Couple embracing during golden hour"
+                        loading="lazy"
+                        width="600"
+                        height="450" />
+                    <div class="portfolio-card-content">
+                        <h3 class="portfolio-card-title">Golden Hour Vows</h3>
+                        <p class="portfolio-card-description">Destination elopement in the Dolomites, capturing soft, sun-kissed romance.</p>
                     </div>
                 </article>
-                <article class="portfolio-card">
-                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80"
-                        alt="Editorial portrait of a model with colorful styling" loading="lazy" />
-                    <div>
-                        <h3>Chromatic Muse</h3>
-                        <p>Editorial series for Bloom Magazine exploring bold color stories in fashion.</p>
+                <article class="portfolio-card" role="listitem">
+                    <img src=""
+                        alt="Editorial portrait of a model with colorful styling"
+                        loading="lazy"
+                        width="600"
+                        height="450" />
+                    <div class="portfolio-card-content">
+                        <h3 class="portfolio-card-title">Chromatic Muse</h3>
+                        <p class="portfolio-card-description">Editorial series for Bloom Magazine exploring bold color stories in fashion.</p>
                     </div>
                 </article>
-                <article class="portfolio-card">
-                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80"
-                        alt="Landscape of mountains during sunrise" loading="lazy" />
-                    <div>
-                        <h3>Echoes of Earth</h3>
-                        <p>Fine art landscape collection focused on the quiet poetry of remote terrain.</p>
+                <article class="portfolio-card" role="listitem">
+                    <img src=""
+                        alt="Landscape of mountains during sunrise"
+                        loading="lazy"
+                        width="600"
+                        height="450" />
+                    <div class="portfolio-card-content">
+                        <h3 class="portfolio-card-title">Echoes of Earth</h3>
+                        <p class="portfolio-card-description">Fine art landscape collection focused on the quiet poetry of remote terrain.</p>
                     </div>
                 </article>
-                <article class="portfolio-card">
-                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"
-                        alt="Family smiling together outdoors" loading="lazy" />
-                    <div>
-                        <h3>Kinship Sessions</h3>
-                        <p>Documentary-style family sessions celebrating connection in everyday moments.</p>
+                <article class="portfolio-card" role="listitem">
+                    <img src=""
+                        alt="Family smiling together outdoors"
+                        loading="lazy"
+                        width="600"
+                        height="450" />
+                    <div class="portfolio-card-content">
+                        <h3 class="portfolio-card-title">Kinship Sessions</h3>
+                        <p class="portfolio-card-description">Documentary-style family sessions celebrating connection in everyday moments.</p>
                     </div>
                 </article>
             </div>
@@ -150,9 +172,10 @@
             </div>
         </section>
     </main>
-    <footer>
-        &copy; <span id="current-year"></span> Captured Moments Photography. All rights reserved.
+    <footer role="contentinfo">
+        <p>
+            &copy; <span id="current-year"></span> Captured Moments Photography. All rights reserved.
+        </p>
     </footer>
-
 </body>
 </html>

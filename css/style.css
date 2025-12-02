@@ -382,63 +382,24 @@ section {
 
 .portfolio {
     background: white;
+    padding-bottom: 2rem;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-.portfolio-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent-light);
-}
-
-.portfolio-card img {
+.portfolio-pdf-container {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-card:hover img {
-    transform: scale(1.05);
-}
-
-.portfolio-card-content {
-    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+    height: calc(100vh - 100px);
     display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
-.portfolio-card-title {
-    margin: 0;
-    font-size: 1.375rem;
-    font-weight: 700;
-    color: var(--text-dark);
-}
-
-.portfolio-card-description {
-    color: var(--text-light);
-    margin: 0;
-    line-height: 1.6;
-    font-size: 0.9375rem;
+.portfolio-pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
 }
 
 .section-description {

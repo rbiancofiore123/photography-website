@@ -1,6 +1,6 @@
 /**
  * Photography Portfolio - Main JavaScript
- * Handles navigation, smooth scrolling, and active link highlighting
+ * Handles navigation, smooth scrolling, active link highlighting, and scroll effects
  */
 
 'use strict';
@@ -13,6 +13,7 @@ const SELECTORS = {
     navLink: '.nav-link',
     sections: 'main section[id]',
     currentYear: '#current-year',
+    header: 'header',
 };
 
 const OBSERVER_OPTIONS = {
@@ -21,6 +22,7 @@ const OBSERVER_OPTIONS = {
 };
 
 const SCROLL_OFFSET = 120;
+const SCROLL_THRESHOLD = 50;
 
 // =============================================================================
 // DOM Element References
@@ -29,6 +31,7 @@ const SCROLL_OFFSET = 120;
 const navLinks = document.querySelectorAll(SELECTORS.navLink);
 const sections = document.querySelectorAll(SELECTORS.sections);
 const yearElement = document.querySelector(SELECTORS.currentYear);
+const header = document.querySelector(SELECTORS.header);
 
 // =============================================================================
 // Navigation Functions
@@ -142,6 +145,40 @@ function setCurrentYear() {
     yearElement.textContent = currentYear;
 }
 
+/**
+ * Adds scroll effect to header
+ */
+function initHeaderScrollEffect() {
+    if (!header) return;
+
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function updateHeader() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > SCROLL_THRESHOLD) {
+            header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)';
+            header.style.padding = '0.75rem clamp(1.5rem, 5vw, 4rem)';
+        } else {
+            header.style.boxShadow = '';
+            header.style.padding = '1rem clamp(1.5rem, 5vw, 4rem)';
+        }
+        
+        lastScrollTop = scrollTop;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+}
+
 // =============================================================================
 // Initialization
 // =============================================================================
@@ -164,6 +201,9 @@ function init() {
 
     // Set current year
     setCurrentYear();
+    
+    // Initialize header scroll effect
+    initHeaderScrollEffect();
 }
 
 // Start the application

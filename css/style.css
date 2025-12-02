@@ -197,6 +197,7 @@ section {
     gap: var(--section-gap);
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 /* ==========================================================================
@@ -204,8 +205,8 @@ section {
    ========================================================================== */
 
 .hero {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: clamp(2rem, 6vw, 4rem);
+    grid-template-columns: 1fr 1.2fr;
+    column-gap: clamp(3rem, 8vw, 6rem);
     padding: clamp(6rem, 12vw, 10rem) clamp(1.5rem, 6vw, 4.5rem) clamp(4rem, 10vw, 8rem);
     row-gap: clamp(2rem, 6vw, 3rem);
     align-content: center;
@@ -229,10 +230,11 @@ section {
 }
 
 .hero-copy {
-    max-width: 36rem;
+    max-width: 32rem;
     display: grid;
-    gap: clamp(1.25rem, 3vw, 2rem);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
     align-content: start;
+    padding-right: 2rem;
 }
 
 .cta-group {
@@ -291,7 +293,7 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow-xl);
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     justify-self: center;
     transition: transform 0.3s ease;
 }
@@ -334,11 +336,12 @@ section {
     color: var(--text-light);
     line-height: 1.8;
     font-size: 1.0625rem;
+    margin-bottom: 1.25rem;
 }
 
 .about-grid {
     display: grid;
-    gap: var(--section-gap);
+    gap: clamp(2rem, 4vw, 3rem);
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
@@ -421,7 +424,7 @@ section {
 .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--section-gap);
+    gap: clamp(3rem, 6vw, 5rem);
     align-items: start;
 }
 
@@ -653,10 +656,16 @@ footer p {
 
     section {
         padding: 3rem 1.5rem;
+        min-height: auto;
     }
     
     .hero {
         padding-top: 5rem;
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-copy {
+        padding-right: 0;
     }
 
 }
